@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMC — Gadgets, Games & More</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="noise"></div> <!-- subtle noise texture for glass -->
+  <div class="top-bar">
+    <p>📞 Call/WhatsApp: <strong>08038919878</strong></p>
+  </div>
+
+  <header class="main-header glass">
+    <div class="container flex">
+      <div class="logo">
+        <h1><span class="neon-text">PMC</span></h1>
+        <p>Computer • Phones • Games</p>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box glass">
+          <input type="text" placeholder="Search gadgets..." id="searchInput">
+          <button id="searchBtn">🔍</button>
+        </div>
+        <div class="cart-icon" id="cartIcon">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2 class="glitch" data-text="NEXT-GEN GADGETS">NEXT-GEN GADGETS</h2>
+        <p>Laptops, phones, games, accessories — all under one glass roof. Three locations in Benin City.</p>
+        <a href="#shop" class="btn neon-btn">🛒 Explore Products</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-orb"></div>
+      <div class="floating-orb small"></div>
+    </div>
+  </section>
+
+  <div class="features-strip glass">
+    <div class="container flex">
+      <div class="feature"><span>⚡</span> Fast Service</div>
+      <div class="feature"><span>🛡️</span> Warranty</div>
+      <div class="feature"><span>🚚</span> Delivery</div>
+      <div class="feature"><span>💳</span> Flexible Payment</div>
+    </div>
+  </div>
+
+  <section class="locations" id="locations">
+    <div class="container">
+      <h2 class="section-title">📍 Our Stores in Benin City</h2>
+      <div class="location-grid">
+        <div class="location-card glass">
+          <h3>Ugbor Central</h3>
+          <p>Shop 22,23,24 Twin Plaza, opp. Ogunmwenyi Rd, before Victorious Mega Kitchen, after Sazy Filling Station.</p>
+          <p class="hours">🕒 Mon-Sat: 7:30AM – 8:00PM</p>
+        </div>
+        <div class="location-card glass">
+          <h3>Mission Road</h3>
+          <p>77 Mission Road, near James Watt Junction. From Ring Road, after John Holt Building.</p>
+          <p class="hours">🕒 Mon-Sat: 7:00AM – 7:30PM</p>
+        </div>
+        <div class="location-card glass">
+          <h3>Pipeline Junction Eyean</h3>
+          <p>78 Benin Auchi Road, Pipeline Junction Eyean, Benin City.</p>
+          <p class="hours">🕒 Mon-Sat: 7:30AM – 8:00PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-products" id="shop">
+    <div class="container">
+      <h2 class="section-title">🔥 Hot Deals</h2>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <footer class="glass">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col"><h3>PMC</h3><p>Your one-stop gadget shop in Benin City.</p></div>
+        <div class="footer-col"><h3>Links</h3><ul><li><a href="#">Home</a></li><li><a href="#">Shop</a></li><li><a href="#">Contact</a></li></ul></div>
+        <div class="footer-col"><h3>Contact</h3><p>📞 08038919878</p><p>📧 coming soon</p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 PMC Computer Phones and Games</p></div>
+    </div>
+  </footer>
+
+  <div class="cart-sidebar glass" id="cartSidebar">
+    <div class="cart-header"><h2>Your Cart</h2><button class="close-cart" id="closeCart">&times;</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">No items yet.</p></div>
+    <div class="cart-footer">
+      <div class="total">Total: ₦<span id="cartTotal">0</span></div>
+      <button class="btn neon-btn" id="checkoutBtn">💬 Checkout via WhatsApp</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
