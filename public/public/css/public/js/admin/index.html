@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - PMC Panel</title>
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loginScreen">
+    <div class="login-box glass">
+      <h2>🔐 Admin Login</h2>
+      <input type="text" id="username" placeholder="Username" value="admin">
+      <input type="password" id="password" placeholder="Password" value="pmc2026">
+      <button id="loginBtn">Login</button>
+      <p id="loginMsg" style="color:#ff4444;"></p>
+    </div>
+  </div>
+
+  <div id="adminPanel" style="display:none;">
+    <header class="glass">
+      <h1>🛠️ PMC Admin Dashboard</h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
+    <main>
+      <section class="add-product glass">
+        <h2>➕ Add New Product</h2>
+        <form id="addProductForm">
+          <label>Product Name *</label>
+          <input type="text" name="name" required>
+          <label>Category</label>
+          <input type="text" name="category" placeholder="e.g., Laptop, Phone, Game, TV, Accessory" list="categoryList">
+          <datalist id="categoryList">
+            <option value="Laptop">
+            <option value="Phone">
+            <option value="Game">
+            <option value="Accessory">
+            <option value="TV">
+            <option value="Other">
+          </datalist>
+          <label>Price (₦) *</label>
+          <input type="number" name="price" required min="1">
+          <label>Description</label>
+          <textarea name="description" rows="2"></textarea>
+          <label>Image URL *</label>
+          <input type="url" name="image" placeholder="https://example.com/image.jpg" required>
+          <small style="color:#aaa;">Paste a direct image link (use Imgur or similar)</small>
+          <button type="submit" class="add-btn">🚀 Add Product</button>
+          <p id="addMsg" style="color:var(--neon-green);"></p>
+        </form>
+      </section>
+
+      <section class="product-list glass">
+        <h2>📦 Current Inventory</h2>
+        <table id="productTable">
+          <thead><tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Action</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
